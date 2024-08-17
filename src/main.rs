@@ -42,6 +42,8 @@ impl Buffer {
         } else {
             println!("How did you get here?...");
 
+            drop(buffer); // pretty sure we drop right here anyway, but meh drop explicitly
+
             Err(Ouch.into())
         }
     }
